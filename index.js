@@ -9,6 +9,14 @@ class Driver {
     this.id = driverId++; 
     store.drivers.push(this);
   }
+  trips() { 
+    return store.trips.filter(trips => { 
+      return trips.id === this.id;
+    });
+  }
+  
+  passengers() { 
+    return store.passengers.filter(trips)
   
 }
 
@@ -37,5 +45,7 @@ class Trip {
   
   passenger() { 
     return store.passengers.filter(passenger => {
-      return passenger.id === this.passenger.Id
-    })
+      return passenger.id === this.passenger.Id;
+    });
+  }
+}
